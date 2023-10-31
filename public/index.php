@@ -1,5 +1,7 @@
 <?php
   require_once "../src/models/Car.php";
+  require_once "../src/controllers/CarController.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,8 +13,14 @@
 <body>
   <h1>Ejercicio de coches</h1>
     <?php
-    $car1 = new Car("1234","Ford","Kuga",2021,"blue");
-    echo $car1->model;
+    $controller = new CarController();
+
+    if(isset($_GET["id"])){
+      $controller->show($_GET["id"]);
+    } else {
+      $controller->list();
+    }
+    
     ?>
 </body>
 </html>
