@@ -1,0 +1,16 @@
+{
+    "name": "atteneri/cars",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Atteneri\\Cars\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Atteneri Estévez",
+            "email": "atteeste2003@gmail.com"
+        }
+    ],
+    "require": {}
+}
