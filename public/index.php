@@ -1,6 +1,9 @@
 <?php
-  require_once "../src/models/Car.php";
-  require_once "../src/controllers/CarController.php";
+  // require_once "../src/models/Car.php";
+  // require_once "../src/controllers/CarController.php";
+  require "../vendor/autoload.php";
+
+  use Atteneri\Cars\Controllers\CarController;
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +19,15 @@
     $controller = new CarController();
 
     if(isset($_GET["id"])){
-      $controller->show($_GET["id"]);
+      $id = $_GET["id"];
+      if(isset($_GET["action"])){
+        $action = $_GET["action"];
+        if($action == "delete"){
+          $controller->delete($id);
+        }
+      } else {
+        $controller->show($id);
+      }
     } else {
       $controller->list();
     }
