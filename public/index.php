@@ -29,6 +29,7 @@
         $controller->show($id);
       }
     } else {
+      $controller->create();
       $controller->list();
     }
     

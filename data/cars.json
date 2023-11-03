@@ -684,5 +684,12 @@
         "model": "S60",
         "year": 2008,
         "color": "Green"
+    },
+    {
+        "id": "123456789ABC",
+        "make": "Fiat",
+        "model": "Picanto",
+        "year": 2010,
+        "color": "Black"
     }
 ]

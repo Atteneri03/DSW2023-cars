@@ -32,4 +32,11 @@ class CarController {
     Car::delete($id);
     $this->list();
   }
+
+  public function create(){ //$id,$make,$model,$year,$color
+    // $car = new Car($id,$make,$model,$year,$color);
+    $car = new Car("123456789ABC","Fiat","Picanto",2010,"Black");
+    Car::create($car);
+  }
+
 }
