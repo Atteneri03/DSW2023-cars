@@ -35,13 +35,6 @@
         "color": "Turquoise"
     },
     {
-        "id": "JN1BJ0HP5DM880878",
-        "make": "Chrysler",
-        "model": "Concorde",
-        "year": 1994,
-        "color": "Mauv"
-    },
-    {
         "id": "JN1AZ4EH5DM522673",
         "make": "Rolls-Royce",
         "model": "Phantom",
@@ -690,6 +683,13 @@
         "make": "Fiat",
         "model": "Picanto",
         "year": 2010,
-        "color": "Black"
+        "color": "#66FF99"
+    },
+    {
+        "id": "123456789ABC",
+        "make": "Ford",
+        "model": "Fiesta",
+        "year": "2011",
+        "color": "#c933cc"
     }
 ]

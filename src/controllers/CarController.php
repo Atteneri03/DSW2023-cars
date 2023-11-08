@@ -34,9 +34,27 @@ class CarController {
   }
 
   public function create(){ //$id,$make,$model,$year,$color
-    // $car = new Car($id,$make,$model,$year,$color);
-    $car = new Car("123456789ABC","Fiat","Picanto",2010,"Black");
+    require "../src/views/create.php";
+    
+  }
+
+  public function post($data) {
+    $car = new Car(
+      $data["id"],
+      $data["make"],
+      $data["model"],
+      $data["year"],
+      $data["color"]
+    );
+
     Car::create($car);
+    $this->list();
+
+  }
+
+  public function edit($id) {
+    $car = Car::find($id);
+    require "../src/views/edit.php";
   }
 
 }
