@@ -57,4 +57,10 @@ class CarController {
     require "../src/views/edit.php";
   }
 
+  public function update($id, $data) {
+    Car::update($id,$data);
+    $this->list();
+    
+  }
+
 }

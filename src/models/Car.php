@@ -67,6 +67,20 @@ class Car {
 
   }
 
+  public static function update($id, $data) {
+    $cars = self::getAll();
+    foreach($cars as $car){
+      if($car->id == $id){
+        $car->make = $data["make"];
+        $car->model = $data["model"];
+        $car->year = $data["year"];
+        $car->color = $data["color"];
+      }
+    }
+
+    self::save($cars);
+  }
+
 }
 
 
